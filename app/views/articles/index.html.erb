@@ -4,11 +4,14 @@
 
 <div id="articles">
   <% @articles.each do |article| %>
-    <%= render article %>
+    <%= render 'article', article: article %>
     <p>
       <%= link_to "Show this article", article %>
     </p>
   <% end %>
 </div>
+
+<%= cl_image_tag("kuygly26jocp23xqyeoj",
+      width: 400, height: 300, crop: :fill) %>
 
 <%= link_to "New article", new_article_path %>
